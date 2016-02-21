@@ -1,0 +1,47 @@
+S 2200 Spring 2015
+Project 4
+Name:Jongyeon Kim
+GT Number:903018469	
+
+Problem 1B
+----------
+
+
+1 CPU: 67.6 s
+2 CPUs: 35.8 s
+4 CPUs: 33.0 s
+
+No, there is no linear relationship between the number of CPUs and total excution time. If number of cpu increased, it can improve excution time. However, if we have many cpus more than we actually need, it would not imporve speed anymore.
+
+Problem 2B
+----------
+
+
+timeslices | Total time spent in READY state
+----------------------------------------
+1 CPU with timeslices of 800ms: 325.4 s
+1 CPU with timeslices of 600ms: 314.5 s
+1 CPU with timeslices of 400ms: 298.8 s
+1 CPU with timeslices of 200ms: 285.2 s
+
+In my example, whenever timeslice is decreased, total time spent in READY state is also decreased. However, the shortest timeslice possible is usually not the best choice in a real OS because the shortest timeslice produces high overhead in terms of context switch, so it may make decrease in performance. Thus, timeslice must be large with respect to context switch, otherwise overhead is too high.
+
+
+Problem 3B
+----------
+
+FCFS: 389.9 s
+Static: 176.8 s
+RR with timeslices of 800ms: 324.3 s
+RR with timeslices of 600ms: 314.5 s
+RR with timeslices of 400ms: 298.8 s
+RR with timeslices of 200ms: 285.2 s
+
+
+Static priority scheculing is the closest approximation of SJF I think because SJF is priority scheduling where priority is based on CPU burst time and static priority scheduling works based on process priority. Thus, I think they would have closets result based on the waiting time.
+
+
+
+
+
+

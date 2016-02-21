@@ -1,0 +1,27 @@
+name: Jongyeon Kim
+GTID#: 908018469
+HW1
+
+(a)
+$zero: this register is always zero
+$at: reserved for the assembler, user should not use it because assembler will use this
+$v0: this register is used for storing any returned value from a subroutine call
+$a0-2: these registers are used to pass arguments into subroutines
+$t0-2: these registers are used to store temporary values
+$s0-2: these registers are saved registers. user can save values without put it to stack
+$k0: this register is reserved for OS and Traps
+$sp: this is used as the stack pointer. it keeps track of the top of the activation record for some subroutine
+$fp: this is used as the frame pointer. it is used to point to the first address on the activation record for currently executing process
+$ra: this is used to store the address a subrooutine should return to when it is finished executing.
+
+
+(b)
+the stack pointer will save memory location which is address and stakc will be accessed by stack pointer and frame pointer. the stack pointer will always get starting point of memory address on the stack. The stack will grow up whenever memory address which are used by values is increasing.
+
+
+(c)
+caller is the entity that makes the procedure call, callee is the procedure that is being called.
+
+First, caller saves some necessary addresses and arguments. then callee store the arguments from registers on the stack by stack pinter and callee also stroe return address and address of frame pointer. while procedure is ending, callee will load old frame pointer and return address. after the procedure returned, caller will take return value from $v0.
+
+
